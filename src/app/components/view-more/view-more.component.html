@@ -1,0 +1,13 @@
+<div fxLayout="row">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <img width="40%" src="{{data.image}}" alt="">
+    </div>
+    <div fxLayout="column" style="width: 50%; margin-right: 10%; margin-top: 10%;">
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{data.title}}</h5>
+        <p style="overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{data.description}}</p>
+        <p><strong>Price:</strong> Rs.&nbsp;{{data.price}}</p>
+        <button class="btn btn-primary" style="width: 25%;" (click)=addtocart(data)>Add to cart</button>
+    </div>
+</div>
+
+
