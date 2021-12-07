@@ -1,0 +1,34 @@
+<div fxLayout="column" id="contentToConvert">
+    <mat-card class="headingName container" fxLayout="row">
+        <div class="widthCls headName headingNameOne">Sr.No</div>
+        <div class="widthCls headName headingNameOne">Category</div>
+        <div class="widthCls headName">Description</div>
+        <div class="widthCls headName headingNamethree">Image</div>
+        <div class="widthCls headName headingNamefour">Price</div>
+        <div class="widthCls headName headingNamefour">title</div>
+        <div class="widthCls headName headingNamefour">action</div>
+    </mat-card>
+    <mat-card *ngIf="data" class="container" fxLayout="row">
+        <div class="widthCls infoName">{{data.category}}</div>
+        <div class="widthCls infoName">{{data.description}}</div>
+        <div class="widthCls infoName" style="width: 60%;">{{data.image}}</div>
+        <div class="widthCls infoName">Rs.&nbsp;{{data.price}}</div>
+        <div class="widthCls infoName">{{data.title}}</div>
+        <div class="widthCls infoName"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+        <div ><i class="fa fa-trash" aria-hidden="true"></i></div>
+    </mat-card>
+    <!-- <div> -->
+    <mat-card  class="container" fxLayout="row"
+        *ngFor="let info of tableData; let i = index;">
+        <div class="widthCls infoName">{{info.id}}</div>
+        <div class="widthCls infoName">{{info.category}}</div>
+        <input class="widthCls infoName" type="text" [(ngModel)]="info.category" [disabled]="!info.isEditable" name="" id="">
+        <div class="widthCls infoName">{{info.description}}</div>
+        <div class="widthCls infoName" style="width: 60%;">{{info.image}}</div>
+        <div *ngIf="tableData" class="widthCls infoName">Rs.&nbsp;{{info.price}}</div>
+        <div class="widthCls infoName">{{info.title}}</div>
+        <div class="widthCls infoName" (click)="info.isEditable=!info.isEditable" *ngIf="!info.isEditable || tableData" ><i class="fa fa-pencil" aria-hidden="true"></i></div>
+        <div *ngIf="tableData" (click)="delete(info.id)"><i class="fa fa-trash" aria-hidden="true"></i></div>
+    </mat-card>
+<!-- </div> -->
+</div>

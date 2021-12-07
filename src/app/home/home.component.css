@@ -1,0 +1,97 @@
+mat-card{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 1%;
+  }
+  
+  .searchInputBlogs{
+    width: 31% !important;
+    margin-top: -5px !important;
+    margin-bottom: 4%;
+    margin-left: 70px;
+  }
+  
+  .imgCls{
+    position: relative;
+    left: 15%;
+  }
+  
+  .container{
+    padding: 2%; 
+    border: 0.5px solid lightgray; 
+    border-radius: 4px;
+  }
+  
+  .infoName{
+    margin-left: 30px;
+  }
+  
+  .headingName{
+    font-size: initial; 
+    font-weight: 500;
+  }
+  
+  .headingNameOne{
+    margin-left: 43px;
+      margin-right: 30px;
+  }
+  
+  .headingNamethree{
+    margin-left: 9px;
+  }
+  
+  .headingNamefour{
+    margin-left: 40px;
+  }
+  
+  .widthCls{
+    width: 20%;
+  }
+  
+  @media (min-width: 641px) and (max-width: 730px) {
+    mat-card{
+      width: 100%;
+      margin-left: 0%;
+      margin-bottom: 1%;
+    }
+  
+    .firstRow{
+      left: 1% !important;
+    }
+  }
+  
+  @media (min-width: 730px) and (max-width: 840px) {
+    mat-card{
+      width: 100%;
+      margin-left: 0%;
+      margin-bottom: 1%;
+    }
+  
+    .firstRow{
+      left: 1% !important;
+    }
+  }
+  
+  @media (min-width: 840px) and (max-width: 950px) {
+    mat-card{
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 1%;
+    }
+  
+    .firstRow{
+      left: 6% !important;
+    }
+  }
+  
+  @media (min-width: 950px) and (max-width: 1125px) {
+    mat-card{
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 1%;
+    }
+  
+    .firstRow{
+      left: 6% !important;
+    }
+  }

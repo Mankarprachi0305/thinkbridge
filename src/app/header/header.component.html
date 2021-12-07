@@ -1,0 +1,42 @@
+<div>
+<h1>{{userData.name}}</h1>
+</div>
+
+<mat-toolbar>
+    <mat-toolbar-row>
+
+        <a><img src="../assets/LogoforWeb12.svg" width="50%" alt="image"></a>
+        <div class="spacer"></div>
+        <div class="cursorPointer" fxShow="true" fxHide.xs>
+
+            <a class="searchIcon">
+                <mat-icon>search</mat-icon>
+             </a>&nbsp;&nbsp;&nbsp;
+            
+            <a class="navigation">Logout</a>&nbsp;&nbsp;&nbsp;
+
+        </div>
+        <a mat-icon-button fxShow="true" fxHide.gt-xs>
+            <mat-icon>search</mat-icon>
+        </a>&nbsp;
+        <button mat-icon-button fxShow="true" fxHide.gt-xs>
+            <mat-icon (click)="sidenav.toggle()">segment</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="sideNav">
+    <mat-sidenav-container fxFlexFill fxLayout="column">
+        <mat-sidenav class="sidenavCls" #sidenav position="end">
+            <mat-nav-list class="cursorPointer" fxHide.gt-xs>
+                <a mat-list-item> Logout </a>
+                <br>
+                <br>
+                <a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,39 @@
+.navigation{
+    text-decoration: auto;
+    color: black;
+}
+
+.segmentIcon{
+    position: relative;
+    top: 5px;
+}
+
+.searchIcon{
+    position: relative;
+    top: 8px;
+    color: black;
+}
+
+.cardMat{
+    position: absolute; 
+    z-index: 10000; 
+    top: 10%;
+    width: 100%;
+}
+
+.sideNav{
+    margin-top: 30px; 
+    margin-bottom: 30px;
+}
+
+.sidenavCls{
+    width: 40%; 
+    font-size: large; 
+    padding: 4%;
+}
+
+@media (min-width: 583px){
+    mat-sidenav {
+        display: none;
+    }
+}

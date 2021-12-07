@@ -1,0 +1,8 @@
+<form [formGroup]="addItemForm" fxLayout="column" fxLayoutGap="15px" style="width: 80%;">
+    <input type="text" placeholder="Category" formControlName="category" name="category">
+    <textarea type="text" placeholder="Description" formControlName="desc" name="desc"></textarea>
+    <!-- <input type="text" formControlName="control" name=""> -->
+    <input type="text" placeholder="Price" formControlName="price" name="price">
+    <input type="text" placeholder="Title" formControlName="title" name="title">
+    <button (click)="addItem(addItemForm.value)">Add Item</button>
+</form>

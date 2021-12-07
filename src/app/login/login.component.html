@@ -1,0 +1,7 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <form fxLayout="column" fxLayoutGap="15px" [formGroup]="loginForm" style="width: 40%;">
+        <input type="text" placeholder="Username" formControlName="name" name="name" id="">
+        <input type="text" placeholder="password" formControlName="password" name="password" id="">
+        <button (click)="login(loginForm.value)">Login</button>
+    </form>
+</div>
